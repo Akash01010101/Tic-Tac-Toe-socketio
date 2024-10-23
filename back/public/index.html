@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="form-div">
+    <form id="form" name="form">
+        <label for="p1">Name of player1</label><input type="text" id="p1" required>
+        <label for="p2">Name of player2</label><input type="text" id="p2" required>
+        <input type="submit" id="sub-form" style="margin: 10px;">
+    
+    </form>
+   </div>
+    <div id="game"></div>
+    <div class="win" id="winner"></div>
+    <script src="script.js"></script>
+</body>
+</html>
