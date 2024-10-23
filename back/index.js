@@ -15,6 +15,7 @@ let players = [];
 io.on("connection", (socket)=>{
     let name;
     socket.on("ujoin",(data)=>{
+        name = data.p1_name;
         if (data.p1_name == data.p2_name) {socket.emit("err")}
         if(!players.includes(data.p1_name)){ players.push(data.p1_name); console.log(data) }
         if(players.includes(data.p2_name)){
@@ -43,6 +44,12 @@ io.on("connection", (socket)=>{
         }
         if (p2 != -1){
             players.splice(p2);
+        }
+    })
+    socket.on("disconnect",()=>{
+        const p = players.indexOf(name);
+        if (p != -1){
+            players.splice(p);
         }
     })
 })  
