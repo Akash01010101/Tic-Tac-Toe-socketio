@@ -13,9 +13,9 @@ background-image: linear-gradient(135deg, #8BC6EC 44%, #9599E2 100%);
 #game {
     height: 600px;
     width: 600px;
-    display: grid;
     grid-template-columns: repeat(3, 1fr); 
    background: none;
+   display: none;
 }
 
 .item {
@@ -42,14 +42,16 @@ background-image: linear-gradient(135deg, #8BC6EC 44%, #9599E2 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 .inp{
     margin: 20px;
 }
 input[type='text']{
+    height: 30px;
+    width: 250px;
     border-radius: 10px;
     border:none;
-    height: 20px;
 }
 input[type='submit']{
     width: 100px;

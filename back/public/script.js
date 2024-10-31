@@ -20,9 +20,10 @@ form.addEventListener("submit", (e)=>{
           const t = document.getElementById("form-div");
           const players = ps.data;
           t.innerHTML = '';
+          let grid = document.getElementById("game");
+          grid.style.display='grid'
           for (let i=0; i<9; i++)
             {
-                let grid = document.getElementById("game");
                 let ch = document.createElement("div");
                 grid.appendChild(ch);
                 ch.className = "item";
