@@ -17,7 +17,7 @@ io.on("connection", (socket)=>{
     socket.on("ujoin",(data)=>{
         name = data.p1_name;
         if (data.p1_name == data.p2_name) {socket.emit("err")}
-        if(!players.includes(data.p1_name)){ players.push(data.p1_name); console.log(data) }
+        if(!players.includes(data.p1_name)){ players.push(data.p1_name); }
         if(players.includes(data.p2_name)){
                 let ps = 'O';
                 socket.emit("playas",{ps,data})
@@ -32,11 +32,9 @@ io.on("connection", (socket)=>{
         
     })
     socket.on("move",(data)=>{
-        console.log(data)
         socket.broadcast.emit("rec",data)
     })
     socket.on('win',(data)=>{
-        console.log(players)
         const p1 = players.indexOf(data.p1_name);
         const p2 = players.indexOf(data.p2_name);
         if (p1 != -1){

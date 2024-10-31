@@ -15,10 +15,8 @@ form.addEventListener("submit", (e)=>{
           
         })
         socket.on("connected-2-p",()=>{
-          console.log("connected")
         })
         socket.on("playas",(ps)=>{
-          console.log(ps.ps)
           const t = document.getElementById("form-div");
           const players = ps.data;
           t.innerHTML = '';
